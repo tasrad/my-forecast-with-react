@@ -1,4 +1,4 @@
-
+import './Search.css';
 
 
 export default function Search(){
@@ -8,13 +8,14 @@ export default function Search(){
           <input
             type="text"
             placeholder="Enter your city..."
-            autoFocus="off"
+            // autoFocus="off"
+            className="input-search"
           />
 
-          <button type="submit" >
+          <button type="submit" className="btn-search">
             Search
           </button>
-          <button type="submit" >
+          <button type="submit" className="btn-current">
             Current
           </button>
         </form>
