@@ -1,0 +1,21 @@
+div{
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
+.city-name{
+    text-transform: capitalize;
+    font-size: x-large;
+}
+.current-temp{
+    font-size: x-large;
+}
+.sky{
+    vertical-align: bottom;
+}
+img{
+    display: block;
+    margin: 0 0 0 10px;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}

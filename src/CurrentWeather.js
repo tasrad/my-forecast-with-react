@@ -1,4 +1,5 @@
 import img from "./img.png";
+import "./CurrentWeather.css";
 
 export default function CurrentWeather(){
     return(
@@ -6,9 +7,9 @@ export default function CurrentWeather(){
             <div className="container">
                 <div className="row p-3">
                     <div className="col-6">
-                        Krakiv
+                       <span className="city-name"> ⌂ Krakiv</span>
                     </div>
-                    <div className="col-6">
+                    <div className="col-6 sky">
                         Cloudy
                     </div>
                 </div>
@@ -19,11 +20,11 @@ export default function CurrentWeather(){
           id="icon"
           src={img}
           alt="Weather icon"
-          width="100px"
+          width="70px"
         />
                     </div>
                     <div className="col-6">
-                       <strong>-14 ℃</strong>
+                       <strong className="current-temp">-14 ℃</strong>
                         <p>Feels like: <span>-18℃</span></p>
                     </div>
                 </div>
