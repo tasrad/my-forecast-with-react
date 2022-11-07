@@ -1,20 +1,20 @@
 import img from "./img.png";
-import "./WeatherForWeek.css"
+import "./WeatherForWeek.css";
 
 
 export default function WeatherForWeek(){
     return(
         <div className="WeatherForWeek ">
             <div className="container">
-                <div className="row m-3 justify-content-center">
-                    <div className="col-2">
+                <div className="row m-3">
+                    <div className="col-2 border-0">
                         <span>Mon</span>
                         <img
           className="img-fluid" 
           id="icon"
           src={img}
           alt="Weather icon"
-          width="20px"
+          width="30px"
         />
                         <span>1</span>℃
                         <br />
@@ -28,7 +28,7 @@ export default function WeatherForWeek(){
           id="icon"
           src={img}
           alt="Weather icon"
-          width="20px"
+          width="30px"
         />
                         <span>1</span>℃
                         <br />
@@ -42,7 +42,7 @@ export default function WeatherForWeek(){
           id="icon"
           src={img}
           alt="Weather icon"
-          width="20px"
+          width="30px"
         />
                         <span>1</span>℃
                         <br />
@@ -56,7 +56,7 @@ export default function WeatherForWeek(){
           id="icon"
           src={img}
           alt="Weather icon"
-          width="20px"
+          width="30px"
         />
                         <span>1</span>℃
                         <br />
@@ -70,7 +70,7 @@ export default function WeatherForWeek(){
           id="icon"
           src={img}
           alt="Weather icon"
-          width="20px"
+          width="30px"
         />
                         <span>1</span>℃
                         <br />
@@ -84,7 +84,7 @@ export default function WeatherForWeek(){
           id="icon"
           src={img}
           alt="Weather icon"
-          width="20px"
+          width="30px"
         />
                         <span>1</span>℃
                         <br />
