@@ -1,4 +1,5 @@
 import Search from "./Search.js";
+import Footer from "./Footer.js"
 import CurrentWeather from "./CurrentWeather.js";
 import WeatherForWeek from "./WeatherForWeek.js";
 
@@ -9,6 +10,7 @@ function App() {
       <Search />
       <CurrentWeather />
       <WeatherForWeek />
+      <Footer />
     </div>
   );
 }
