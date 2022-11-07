@@ -10,10 +10,11 @@ div{
 }
 .sky{
     vertical-align: bottom;
+    font-size: x-large;
 }
-img{
+.main-img{
     display: block;
-    margin: 0 0 0 10px;
+    margin: 0 10px;
 }
 ul{
     list-style-type: none;

@@ -1,17 +1,20 @@
 
 
 form{
-   margin: 0 auto;
+   margin: 10px auto;
    display: block;
 }
 .input-search{
-    width: 50%; 
-    height: 30px;
+    width: 55%; 
+    height: 35px;
+    border-radius: 5px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .btn-search{
     background-color: whitesmoke;
-    height: 30px;
+    height: 35px;
+    margin: 0 0 0 5px;
+    border-radius: 5px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .btn-search:hover{
@@ -19,7 +22,8 @@ form{
 }
 .btn-current{
     background-color: wheat;
-    height: 30px;
+    height: 35px;
+    border-radius: 5px;
     margin: 0 0 0 5px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
