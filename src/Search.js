@@ -8,7 +8,7 @@ export default function Search(){
           <input
             type="text"
             placeholder="Enter your city..."
-            // autoFocus="off"
+            autoFocus="on"
             className="input-search"
           />
 
