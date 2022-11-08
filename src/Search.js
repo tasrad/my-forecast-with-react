@@ -3,7 +3,7 @@ import './Search.css';
 
 export default function Search(){
     return(
-        <div className="Search">
+        <div className="Search ps-4">
             <form >
           <input
             type="text"

@@ -1,5 +1,6 @@
 import img from "./img.png";
 import "./CurrentWeather.css";
+import DayAndTime from "./DayAndTime.js"
 
 export default function CurrentWeather(){
     return(
@@ -8,6 +9,7 @@ export default function CurrentWeather(){
                 <div className="row p-4">
                     <div className="col-6">
                        <span className="city-name"> ⌂ Krakiv</span>
+                       <DayAndTime />
                     </div>
                     <div className="col-6 sky">
                         Cloudy
