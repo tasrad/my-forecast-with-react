@@ -25,8 +25,9 @@ export default function CurrentWeather(){
     }
 
     function Search(){
-        let city = "Berlin"
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b77049e9691e8c2e289bf38fe27ce568&units=metric`;
+        let city = "Zhytomyr"
+        const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(showResponse)
     };
     Search()
