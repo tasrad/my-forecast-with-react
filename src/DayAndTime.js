@@ -21,7 +21,7 @@ export default function DayAndTime(props){
       if (minutes <10){
         minutes = `0${minutes}`
       }
-
+console.log(props.date);
 
     return(
         <div className="DayAndTime">

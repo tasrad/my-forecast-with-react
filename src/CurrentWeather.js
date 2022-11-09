@@ -22,7 +22,7 @@ export default function CurrentWeather(){
             icon: response.data.daily[0].condition.icon_url,
         })
     }
-    console.log(weatherData.date);
+
 
     function Search(){
         let city = "Zhytomyr"
