@@ -5,7 +5,7 @@ import DayAndTime from "./DayAndTime.js";
 import axios from 'axios';
 
 export default function CurrentWeather(){
-    const [weatherData, setWeatherData] = useState({});
+    const [weatherData, setWeatherData] = useState({ready: false});
 
     function showResponse(response){
         console.log(response.data)
@@ -29,8 +29,8 @@ export default function CurrentWeather(){
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(showResponse)
     }
-    Search();
-
+    
+if (weatherData.ready){
     return(
         <div className="CurrentWeather">
             <div className="container">
@@ -87,5 +87,9 @@ export default function CurrentWeather(){
                 </div>
             </div>
         </div>
-    )
+    );
+} else {
+    Search();
+    return "Loading...";
+  }
 }
