@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function DayAndTime(props){
-
+ 
 
     let days = [
         "Sunday",
@@ -12,8 +12,8 @@ export default function DayAndTime(props){
         "Friday",
         "Saturday"
       ];
-      
-      let day = days[props.date.getDay()];
+      let dayNumber = props.date.getDay();
+      let day = days[dayNumber];
       let hours = props.date.getHours();
       if (hours <10){
         hours = `0${hours}`
@@ -22,7 +22,7 @@ export default function DayAndTime(props){
       if (minutes <10){
         minutes = `0${minutes}`
       }
-console.log(props.date);
+
 
     return(
         <div className="DayAndTime">

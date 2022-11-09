@@ -9,7 +9,6 @@ export default function CurrentWeather(){
     const [weatherData, setWeatherData] = useState({});
 
     function showResponse(response){
-       
         setWeatherData({
             date:new Date(response.data.dt*1000),
             temp:Math.round(response.data.main.temp),
@@ -35,7 +34,7 @@ export default function CurrentWeather(){
 
 
     function Search(){
-        let city = "Zhytomyr"
+        let city = "london"
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=b77049e9691e8c2e289bf38fe27ce568`;
         axios.get(apiUrl).then(showResponse)
     };
