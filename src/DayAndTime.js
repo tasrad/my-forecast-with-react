@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 
 export default function DayAndTime(){
-const [currentDay, setCurrentDay] = useState("");
-    function getDate(){
-    let date = new Date();
-    let days = [
-        "Sunday",
-        "Monday",
-        "Tuersday",
-        "Wednesday",
-        "Thusday",
-        "Friday",
-        "Saturday"
-      ];
-      setCurrentDay(days[date.getDate()]);
-    }
+// const [currentDay, setCurrentDay] = useState("");
+//     function getDate(){
+//     let date = new Date();
+//     let days = [
+//         "Sunday",
+//         "Monday",
+//         "Tuersday",
+//         "Wednesday",
+//         "Thusday",
+//         "Friday",
+//         "Saturday"
+//       ];
+//       setCurrentDay(days[date.getDate()]);
+//     }
 
     return(
         <div className="DayAndTime">
