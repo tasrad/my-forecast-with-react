@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import img from "./img.png";
 import "./CurrentWeather.css";
 import DayAndTime from "./DayAndTime.js";
+import WeatherForWeek from "./WeatherForWeek.js";
 import axios from 'axios';
 
 export default function CurrentWeather(){
@@ -25,8 +26,7 @@ export default function CurrentWeather(){
 
     function Search(){
         let city = "Berlin"
-        const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=b77049e9691e8c2e289bf38fe27ce568`;
         axios.get(apiUrl).then(showResponse)
     }
     
@@ -86,6 +86,7 @@ if (weatherData.ready){
                     </div>
                 </div>
             </div>
+            <WeatherForWeek />
         </div>
     );
 } else {
