@@ -30,7 +30,7 @@ export default function CurrentWeather(){
             // description: response.data.daily[0].condition.description,
             // icon: response.data.daily[0].condition.icon_url,
         });
-        console.log(weatherData.date)
+        
     }
 
 
