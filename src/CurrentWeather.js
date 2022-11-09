@@ -6,7 +6,7 @@ import WeatherForWeek from "./WeatherForWeek.js";
 import axios from 'axios';
 
 export default function CurrentWeather(){
-    const [weatherData, setWeatherData] = useState({ready: false});
+    const [weatherData, setWeatherData] = useState({});
 
     function showResponse(response){
         console.log(response.data)
@@ -26,11 +26,12 @@ export default function CurrentWeather(){
 
     function Search(){
         let city = "Berlin"
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=b77049e9691e8c2e289bf38fe27ce568`;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b77049e9691e8c2e289bf38fe27ce568&units=metric`;
         axios.get(apiUrl).then(showResponse)
-    }
+    };
+    Search()
     
-if (weatherData.ready){
+
     return(
         <div className="CurrentWeather">
             <div className="container">
@@ -89,8 +90,5 @@ if (weatherData.ready){
             <WeatherForWeek />
         </div>
     );
-} else {
-    Search();
-    return "Loading...";
-  }
+
 }
