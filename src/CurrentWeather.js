@@ -9,25 +9,23 @@ export default function CurrentWeather(){
     const [weatherData, setWeatherData] = useState({});
 
     function showResponse(response){
-        console.log(response.data)
+       
         setWeatherData({
-            temp: Math.round(response.data.main.temp),
-            feelsLike:  Math.round(response.data.main.feels_like),
-            humidity: response.data.main.humidity,
-            pressure: response.data.main.pressure,
-            wind: response.data.wind.speed,
-            name: response.data.name,
-            description: response.data.weather[0].description,
-            sunrise: response.data.sys.sunrise,
-            sunset: response.data.sys.sunset,
-            icon: response.data.weather[0].icon,
+             date: new Date(response.data.daily[0].time*1000),
+            temp: Math.round(response.data.daily[0].temperature.day),
+            minTemp:Math.round(response.data.daily[0].temperature.minimum),
+            maxTemp:Math.round(response.data.daily[0].temperature.maximum),
+            humidity: response.data.daily[0].temperature.humidity,
+            wind: response.data.daily[0].wind.speed,
+            name: response.data.city,
+            description: response.data.daily[0].condition.description,
+            icon: response.data.daily[0].condition.icon_url,
         })
     }
 
     function Search(){
         let city = "Zhytomyr"
-        const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=9c0b97cob44tdcf229e160b3ea408da9&units=metric`;
         axios.get(apiUrl).then(showResponse)
     };
     Search()
@@ -39,7 +37,7 @@ export default function CurrentWeather(){
                 <div className="row p-4">
                     <div className="col-6">
                        <span className="city-name text-capitalize"> ⌂ {weatherData.name}</span>
-                       <DayAndTime />
+                       <DayAndTime date={weatherData.date}/>
                     </div>
                     <div className="col-6 sky text-capitalize">
                         {weatherData.description}
@@ -57,32 +55,21 @@ export default function CurrentWeather(){
                     </div>
                     <div className="col-6">
                        <strong className="current-temp">{weatherData.temp}℃ | F</strong>
-                        <p>Feels like: <span>{weatherData.feelsLike}℃</span></p>
                     </div>
                 </div>
                 <div className="row p-3">
                     <div className="col-6">
                         <ul>
-                            <li> Wind:{weatherData.wind}km/h
-                            </li>
-                            <li>
-                            Precipitation:
-                            </li>
-                            <li>
-                            Sunrise:{weatherData.sunrise}
-                            </li>
+                            <li>Minimum:{weatherData.minTemp}℃</li>
+                            <li>Maximum:{weatherData.maxTemp}℃</li>
                         </ul>
                     </div>
                     <div className="col-6">
                     <ul>
+                    <li> Wind:{weatherData.wind}km/h
+                            </li>
                             <li>
                                 Humidity:{weatherData.humidity}%
-                            </li>
-                            <li>
-                            Pressure:{weatherData.pressure}hPa
-                            </li>
-                            <li>
-                                Sunset:{weatherData.sunset}
                             </li>
                         </ul>
                     </div>
