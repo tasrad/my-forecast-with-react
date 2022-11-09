@@ -6,7 +6,7 @@ import WeatherForWeek from "./WeatherForWeek.js";
 import axios from 'axios';
 
 export default function CurrentWeather(){
-    const [weatherData, setWeatherData] = useState({});
+    const [weatherData, setWeatherData] = useState({ready: false});
 
     function showResponse(response){
        
@@ -22,15 +22,16 @@ export default function CurrentWeather(){
             icon: response.data.daily[0].condition.icon_url,
         })
     }
+    console.log(weatherData.date);
 
     function Search(){
         let city = "Zhytomyr"
         let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=9c0b97cob44tdcf229e160b3ea408da9&units=metric`;
         axios.get(apiUrl).then(showResponse)
     };
-    Search()
+    // Search()
     
-
+if(weatherData.ready){
     return(
         <div className="CurrentWeather">
             <div className="container">
@@ -78,5 +79,10 @@ export default function CurrentWeather(){
             <WeatherForWeek />
         </div>
     );
+} else{
+    Search();
+    return "Loading...";
+
+}
 
 }
