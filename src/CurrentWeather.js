@@ -2,6 +2,7 @@ import React from 'react';
 import img from "./img.png";
 import "./CurrentWeather.css";
 import DayAndTime from "./DayAndTime.js";
+import WeatherIcon from "./WeatherIcon.js";
 
 
 
@@ -11,7 +12,7 @@ export default function CurrentWeather(props){
         <div className="CurrentWeather">
             <div className="container">
                 <div className="row p-4">
-                    <div className="col-6">
+                    <div className="col-6 ps-1">
                        <span className="city-name text-capitalize"> ⌂ {props.data.name}</span>
                        <DayAndTime date={props.data.date}/>
                     </div>
@@ -21,13 +22,9 @@ export default function CurrentWeather(props){
                 </div>
                 <div className="row">
                     <div className="col-6">
-                    <img
-          className="img-fluid main-img"
-          id="icon"
-          src={img}
-          alt="Weather icon"
-          width="70px"
-        />
+                        <div className="weather-icon">
+                        <WeatherIcon code={props.data.icon}/>
+                        </div>
                     </div>
                     <div className="col-6">
                        <strong className="current-temp">{props.data.temp}℃ | F</strong>
