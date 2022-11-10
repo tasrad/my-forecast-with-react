@@ -33,7 +33,7 @@ searchCity()
 
   function handleChange(event){
     event.preventDefault();
-    setCity(event.target.value)
+    setCity(event.target.value);
   };
   
   function searchCity(){
