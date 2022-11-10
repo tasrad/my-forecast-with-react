@@ -1,5 +1,6 @@
 import Search from "./Search.js";
 import Footer from "./Footer.js"
+import "./App.css"
 
 
 

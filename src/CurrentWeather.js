@@ -12,11 +12,11 @@ export default function CurrentWeather(props){
             <div className="container">
                 <div className="row p-4">
                     <div className="col-6">
-                       <span className="city-name text-capitalize"> ⌂ {props.name}</span>
-                       <DayAndTime date={props.date}/>
+                       <span className="city-name text-capitalize"> ⌂ {props.data.name}</span>
+                       <DayAndTime date={props.data.date}/>
                     </div>
                     <div className="col-6 sky text-capitalize">
-                        {props.description}
+                        {props.data.description}
                     </div>
                 </div>
                 <div className="row">
@@ -30,22 +30,22 @@ export default function CurrentWeather(props){
         />
                     </div>
                     <div className="col-6">
-                       <strong className="current-temp">{props.temp}℃ | F</strong>
+                       <strong className="current-temp">{props.data.temp}℃ | F</strong>
                     </div>
                 </div>
                 <div className="row p-3">
                     <div className="col-6">
                         <ul>
-                            <li>Minimum:{props.minTemp}℃</li>
-                            <li>Maximum:{props.maxTemp}℃</li>
+                            <li>Minimum:{props.data.minTemp}℃</li>
+                            <li>Maximum:{props.data.maxTemp}℃</li>
                         </ul>
                     </div>
                     <div className="col-6">
                     <ul>
-                    <li> Wind:{props.wind}km/h
+                    <li> Wind:{props.data.wind}km/h
                             </li>
                             <li>
-                                Humidity:{props.humidity}%
+                                Humidity:{props.data.humidity}%
                             </li>
                         </ul>
                     </div>

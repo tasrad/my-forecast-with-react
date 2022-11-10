@@ -12,7 +12,7 @@ export default function DayAndTime(props){
         "Friday",
         "Saturday"
       ];
-      let dayNumber = props.data.date.getDay();
+      let dayNumber = props.date.getDay();
       let day = days[dayNumber];
       let hours = props.date.getHours();
       if (hours <10){
