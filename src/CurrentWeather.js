@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import img from "./img.png";
 import "./CurrentWeather.css";
 import DayAndTime from "./DayAndTime.js";
