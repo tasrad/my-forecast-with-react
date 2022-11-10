@@ -1,8 +1,8 @@
 import React from 'react';
-import img from "./img.png";
 import "./CurrentWeather.css";
 import DayAndTime from "./DayAndTime.js";
 import WeatherIcon from "./WeatherIcon.js";
+import Temperature from "./Temperature.js"
 
 
 
@@ -27,7 +27,7 @@ export default function CurrentWeather(props){
                         </div>
                     </div>
                     <div className="col-6">
-                       <strong className="current-temp">{props.data.temp}℃ | F</strong>
+                        <Temperature temp={props.data.temp} />
                     </div>
                 </div>
                 <div className="row p-3">
