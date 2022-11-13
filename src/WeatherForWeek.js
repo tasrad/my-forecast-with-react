@@ -10,7 +10,7 @@ export default function WeatherForWeek(props){
                 <div className="row m-3">
                     <div className="col-2 border-0">
                         <span>Mon</span>
-                        <WeatherIcon code={props.data.icon} size={15}/>
+                        <WeatherIcon code={props.data.icon} size={29}/>
                         <span className="forecast-temp">1°</span>
                         <br />
                         <span className="forecast-temp">-5°</span>
@@ -18,13 +18,7 @@ export default function WeatherForWeek(props){
 
                     <div className="col-2">
                         <span>Tue</span>
-                        <img
-          className="img-fluid" 
-          id="icon"
-          src={img}
-          alt="Weather icon"
-          width="30px"
-        />
+                        <WeatherIcon code={props.data.icon} size={29}/>
                         <span className="forecast-temp">1°</span>
                         <br />
                         <span className="forecast-temp">-5°</span>
@@ -32,13 +26,7 @@ export default function WeatherForWeek(props){
 
                     <div className="col-2">
                         <span>Wed</span>
-                        <img
-          className="img-fluid" 
-          id="icon"
-          src={img}
-          alt="Weather icon"
-          width="30px"
-        />
+                        <WeatherIcon code={props.data.icon} size={29}/>
                         <span className="forecast-temp">1°</span>
                         <br />
                         <span className="forecast-temp">-5°</span>
@@ -46,13 +34,7 @@ export default function WeatherForWeek(props){
 
                     <div className="col-2">
                         <span>Thu</span>
-                        <img
-          className="img-fluid" 
-          id="icon"
-          src={img}
-          alt="Weather icon"
-          width="30px"
-        />
+                        <WeatherIcon code={props.data.icon} size={29}/>
                         <span className="forecast-temp">1°</span>
                         <br />
                         <span className="forecast-temp">-5°</span>
@@ -60,13 +42,7 @@ export default function WeatherForWeek(props){
 
                     <div className="col-2">
                         <span>Fri</span>
-                        <img
-          className="img-fluid" 
-          id="icon"
-          src={img}
-          alt="Weather icon"
-          width="30px"
-        />
+                        <WeatherIcon code={props.data.icon} size={29}/>
                         <span className="forecast-temp">1°</span>
                         <br />
                         <span className="forecast-temp">-5°</span>
@@ -74,13 +50,7 @@ export default function WeatherForWeek(props){
 
                     <div className="col-2">
                         <span>Sun</span>
-                        <img
-          className="img-fluid" 
-          id="icon"
-          src={img}
-          alt="Weather icon"
-          width="30px"
-        />
+                        <WeatherIcon code={props.data.icon} size={29}/>
                         <span className="forecast-temp">1°</span>
                         <br />
                         <span className="forecast-temp">-5°</span>

@@ -58,7 +58,7 @@ if (weatherData.ready) {
           </button>
         </form>
         <CurrentWeather data={weatherData}/>
-        <WeatherForWeek icon={weatherData}/>
+        <WeatherForWeek data={weatherData}/>
         </div>
     );
   } else {
