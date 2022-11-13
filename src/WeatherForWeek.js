@@ -5,7 +5,17 @@ import axios from "axios";
 
 export default function WeatherForWeek(props){
     const [forecast, setForecast] = useState("");
-console.log(forecast)
+console.log(forecast);
+
+function day(){
+    let date = new Date(forecast[0].data.dt * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let day = date.getDay();
+
+   return days[day];
+}
+
+
  function showResponse (response){
     setForecast(response.data.daily);
     console.log(response.data.daily);
@@ -23,7 +33,7 @@ axios.get(apiUrl).then(showResponse);
             <div className="container">
                 <div className="row m-3">
                     <div className="col-2 border-0">
-                        {/* <span>{forecast[0].dt*1000}</span> */}
+                        {/* <span>{day()}</span> */}
                         <div>
                         <WeatherIcon code={props.data.icon} size={29}/>
                         </div>
