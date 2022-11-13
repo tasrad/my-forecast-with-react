@@ -13,6 +13,7 @@ export default function Search(props){
   function showResponse(response){
       setWeatherData({
         ready:true,
+          coord: response.data.coord,
           date:new Date(response.data.dt*1000),
           temp:Math.round(response.data.main.temp),
           minTemp:Math.round(response.data.main.temp_min),
@@ -23,7 +24,6 @@ export default function Search(props){
           description: response.data.weather[0].description,
           icon: response.data.weather[0].icon
       });
-      
   }
 
 
@@ -58,7 +58,7 @@ if (weatherData.ready) {
           </button>
         </form>
         <CurrentWeather data={weatherData}/>
-        <WeatherForWeek data={weatherData}/>
+        <WeatherForWeek data={weatherData} coord={weatherData.coord}/>
         </div>
     );
   } else {
