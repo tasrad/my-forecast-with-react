@@ -1,24 +1,26 @@
-import React, { useState } from "react";
+import React
+// , { useState } 
+from "react";
 import "./WeatherForWeek.css";
 import WeatherIcon from "./WeatherIcon.js";
 import axios from "axios";
 
 export default function WeatherForWeek(props){
-    const [forecast, setForecast] = useState("");
-console.log(forecast);
+//     const [forecast, setForecast] = useState("");
 
-function day(){
-    let date = new Date(forecast[0].data.dt * 1000);
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    let day = date.getDay();
 
-   return days[day];
-}
+// function day(){
+//     let date = new Date(forecast[0].data.dt * 1000);
+//     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+//     let day = date.getDay();
+
+//    return days[day];
+// }
 
 
  function showResponse (response){
-    setForecast(response.data.daily);
-    console.log(response.data.daily);
+    // setForecast(response.data.daily);
+    console.log(response.data);
  }
 
 let lat = props.coord.lat;
