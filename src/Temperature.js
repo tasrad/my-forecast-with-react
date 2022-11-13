@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Temperature.css";
 
 export default function Temperature(props){
 const [unit, setUnit] = useState("celsius");
@@ -16,17 +17,17 @@ function fahrenheit(){
 if (unit === "celsius"){
     return(
         <div className="Temperature ">
-        <strong className="current-temp">{props.temp}{" "}
-        <a href="/" className="text-decoration-none" onClick={showCelsius}>℃</a> | <a href="/" className="text-decoration-none" onClick={showRahrenheit}>°F</a>
-        </strong>
+        <strong className="current-temp">{props.temp}{" "} </strong>
+        <a href="/" className="text-decoration-none" onClick={showCelsius}>℃</a> <span className="line">| </span> <a href="/" className="text-decoration-none" onClick={showRahrenheit}>°F</a>
+       
         </div>
     )
 } else {
     return(
         <div className="Temperature ">
-        <strong className="current-temp">{fahrenheit()}{" "}
-        <a href="/" className="text-decoration-none" onClick={showCelsius}>℃</a> | <a href="/" className="text-decoration-none" onClick={showRahrenheit}>°F</a>
-        </strong>
+        <strong className="current-temp">{fahrenheit()}{" "}  </strong>
+        <a href="/" className="text-decoration-none" onClick={showCelsius}>℃</a> <span className="line">| </span> <a href="/" className="text-decoration-none" onClick={showRahrenheit}>°F</a>
+      
         </div>
     )
 }

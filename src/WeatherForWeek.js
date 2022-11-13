@@ -16,9 +16,9 @@ export default function WeatherForWeek(){
           alt="Weather icon"
           width="30px"
         />
-                        <span>1</span>℃
+                        <span className="forecast-temp">1°</span>
                         <br />
-                        <span>-5</span>℃
+                        <span className="forecast-temp">-5°</span>
                     </div>
 
                     <div className="col-2">
@@ -30,9 +30,9 @@ export default function WeatherForWeek(){
           alt="Weather icon"
           width="30px"
         />
-                        <span>1</span>℃
+                        <span className="forecast-temp">1°</span>
                         <br />
-                        <span>-5</span>℃
+                        <span className="forecast-temp">-5°</span>
                     </div>
 
                     <div className="col-2">
@@ -44,9 +44,9 @@ export default function WeatherForWeek(){
           alt="Weather icon"
           width="30px"
         />
-                        <span>1</span>℃
+                        <span className="forecast-temp">1°</span>
                         <br />
-                        <span>-5</span>℃
+                        <span className="forecast-temp">-5°</span>
                     </div>
 
                     <div className="col-2">
@@ -58,9 +58,9 @@ export default function WeatherForWeek(){
           alt="Weather icon"
           width="30px"
         />
-                        <span>1</span>℃
+                        <span className="forecast-temp">1°</span>
                         <br />
-                        <span>-5</span>℃
+                        <span className="forecast-temp">-5°</span>
                     </div>
 
                     <div className="col-2">
@@ -72,9 +72,9 @@ export default function WeatherForWeek(){
           alt="Weather icon"
           width="30px"
         />
-                        <span>1</span>℃
+                        <span className="forecast-temp">1°</span>
                         <br />
-                        <span>-5</span>℃
+                        <span className="forecast-temp">-5°</span>
                     </div>
 
                     <div className="col-2">
@@ -86,9 +86,9 @@ export default function WeatherForWeek(){
           alt="Weather icon"
           width="30px"
         />
-                        <span>1</span>℃
+                        <span className="forecast-temp">1°</span>
                         <br />
-                        <span>-5</span>℃
+                        <span className="forecast-temp">-5°</span>
                     </div>
                     
                 </div>

@@ -6,5 +6,8 @@ body{
     max-width: 60%;
     height: 480px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    /* background-image: url(/src/1540001.webp); */
+ }
+
+  .Footer{
+    font-size: 13px;
   }

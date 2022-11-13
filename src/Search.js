@@ -5,6 +5,7 @@ import CurrentWeather from "./CurrentWeather.js";
 import WeatherForWeek from "./WeatherForWeek.js";
 
 
+
 export default function Search(props){
   const [weatherData, setWeatherData] = useState({ready: false});
   const [city, setCity ]= useState(props.defaultCity);
@@ -54,9 +55,6 @@ if (weatherData.ready) {
 
           <button type="submit" className="btn-search">
             Search
-          </button>
-          <button type="submit" className="btn-current">
-            Current
           </button>
         </form>
         <CurrentWeather data={weatherData}/>

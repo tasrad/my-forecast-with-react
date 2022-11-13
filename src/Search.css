@@ -1,3 +1,9 @@
+.Search{
+    background-image: url(/src/back.jpg); 
+    background-color: transparent;
+    background-size: cover;
+    background-position: center; 
+}
 
 
 form{
