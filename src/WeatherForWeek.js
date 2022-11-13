@@ -1,21 +1,16 @@
 import img from "./img.png";
 import "./WeatherForWeek.css";
+import WeatherIcon from "./WeatherIcon.js";
 
 
-export default function WeatherForWeek(){
+export default function WeatherForWeek(props){
     return(
         <div className="WeatherForWeek ">
             <div className="container">
                 <div className="row m-3">
                     <div className="col-2 border-0">
                         <span>Mon</span>
-                        <img
-          className="img-fluid" 
-          id="icon"
-          src={img}
-          alt="Weather icon"
-          width="30px"
-        />
+                        <WeatherIcon code={props.data.icon} size={15}/>
                         <span className="forecast-temp">1°</span>
                         <br />
                         <span className="forecast-temp">-5°</span>
