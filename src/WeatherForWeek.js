@@ -11,14 +11,14 @@ export default function WeatherForWeek(props){
     const [nightTemp, setNightTemp] = useState("");
 
 
-// function showDay(){
-//     let date = new Date(forecast[0].dt);
-//     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-//     let day = date.getDay();
-//     let forecastDay = days[day];
+function showDay(){
+    let date = new Date(forecast[0].dt);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let day = date.getDay();
+    let forecastDay = days[day];
 
-//    return forecastDay;
-// }
+   return forecastDay;
+}
 
 
  function showResponse (response){
@@ -40,7 +40,7 @@ axios.get(apiUrl).then(showResponse);
             <div className="container">
                 <div className="row m-3">
                     <div className="col-2 ">
-                        <span>{forecast[0].dt}</span>
+                        <span>{showDay()}</span>
                         <div>
                         <WeatherIcon code={forecast[0].weather[0].icon} size={29}/>
                         </div>
