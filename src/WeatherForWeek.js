@@ -35,7 +35,7 @@ axios.get(apiUrl).then(showResponse);
         <div className="WeatherForWeek ">
             <div className="container">
                 <div className="row m-3">
-                    <div className="col-2 border-0">
+                    <div className="col-2 ">
                         {/* <span>{showDay}</span> */}
                         <div>
                         <WeatherIcon code={props.data.icon} size={29}/>
