@@ -6,7 +6,9 @@ import WeatherIcon from "./WeatherIcon.js";
 import axios from "axios";
 
 export default function WeatherForWeek(props){
-    const [forecast, setForecast] = useState("");
+    const [forecast, setForecast] = useState({});
+    const [dayTemp, setDayTemp] = useState("");
+    const [nightTemp, setNightTemp] = useState("");
 
 
 // function showDay(){
@@ -21,12 +23,14 @@ export default function WeatherForWeek(props){
 
  function showResponse (response){
  setForecast(response.data.daily);
-    console.log(response.data.daily[0].dt*1000);
- }
+ setDayTemp(response.data.daily.temp.day);
+ setNightTemp(response.data.daily.temp.night);
+ };
+
 
 let lat = props.coord.lat;
 let lon = props.coord.lon;
-let key = "0ebc654fccbc00189d5408f3d6f15b08";
+let key = "25fad9f7e87157d33dde0f82ab269ee8";
 let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
 axios.get(apiUrl).then(showResponse);
 
@@ -36,16 +40,16 @@ axios.get(apiUrl).then(showResponse);
             <div className="container">
                 <div className="row m-3">
                     <div className="col-2 ">
-                        {/* <span>{showDay}</span> */}
+                        <span>{forecast[0].dt}</span>
                         <div>
-                        <WeatherIcon code={props.data.icon} size={29}/>
+                        <WeatherIcon code={forecast[0].weather[0].icon} size={29}/>
                         </div>
                         <span className="forecast-temp">
-                            {Math.round(forecast[0].temp.max)}°
+                            {Math.round(nightTemp)}°
                             </span>
                         <br />
                         <span className="forecast-temp">
-                            {Math.round(forecast[0].temp.min)}°
+                            {Math.round(dayTemp)}°
                             </span>
                     </div>
                     
