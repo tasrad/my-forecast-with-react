@@ -21,15 +21,15 @@ export default function dailyForecast(props){
 
     return(
         <div className="dailyForecast">
-        <span>{showDay()}</span>
+        <div>{showDay()}</div>
         <div>
         <WeatherIcon code={props.data.weather[0].icon} size={29}/>
         </div>
         <span className="forecast-temp">
             {tempDay()}
             </span>
-        <br />
-        <span className="forecast-temp">
+            {" "}
+        <span className="forecast-temp night">
             {tempNight()}
             </span>
    </div>

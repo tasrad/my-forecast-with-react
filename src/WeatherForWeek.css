@@ -1,15 +1,14 @@
 
-.col-2{
+.col{
     border-left: 2px solid rgb(196, 195, 195);
     text-align: center;
 }
-.col-2:hover{
+.col:hover{
     background-color: rgba(196, 195, 195, 0.179);
-}
-img{
-    display: block;
-    margin: 0 auto;
 }
 .forecast-temp{
     font-size: 14px;
+}
+.night{
+    color: rgba(0, 0, 0, 0.695);
 }
