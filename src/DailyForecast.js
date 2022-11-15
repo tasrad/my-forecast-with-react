@@ -10,15 +10,14 @@ export default function dailyForecast(props){
     function tempNight(){
         let nightTemp = Math.round(props.data.temp.night);
         return `${nightTemp}°`
-    }
+    };
     function showDay(){
         let date = new Date(props.data.dt*1000);
         let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
         let day = date.getDay();
         let forecastDay = days[day];
        return forecastDay;
-    }
-
+    };
     return(
         <div className="dailyForecast">
         <div>{showDay()}</div>

@@ -2,4 +2,7 @@ a,
  .line{
     vertical-align: top;
 }
-
+.current-temp{
+    font-size: 47px;
+    font-weight: 400;
+}

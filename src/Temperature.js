@@ -18,18 +18,19 @@ if (unit === "celsius"){
     return(
         <div className="Temperature ">
         <strong className="current-temp">{props.temp}{" "} </strong>
-        <a href="/" className="text-decoration-none" onClick={showCelsius}>℃</a> <span className="line">| </span> <a href="/" className="text-decoration-none" onClick={showRahrenheit}>°F</a>
+        <a href="/" className="text-decoration-none" onClick={showCelsius}>℃</a> 
+        <span className="line">| </span> 
+        <a href="/" className="text-decoration-none" onClick={showRahrenheit}>°F</a>
        
         </div>
-    )
-} else {
+    )} else {
     return(
         <div className="Temperature ">
-        <strong className="current-temp">{fahrenheit()}{" "}  </strong>
-        <a href="/" className="text-decoration-none" onClick={showCelsius}>℃</a> <span className="line">| </span> <a href="/" className="text-decoration-none" onClick={showRahrenheit}>°F</a>
-      
+        <strong className="current-temp">{fahrenheit()}</strong>
+        <a href="/" className="text-decoration-none" onClick={showCelsius}>℃</a> 
+        <span className="line"> | </span> 
+        <a href="/" className="text-decoration-none" onClick={showRahrenheit}>°F</a>
         </div>
     )
-}
-    
+}  
 }

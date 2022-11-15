@@ -9,7 +9,8 @@ export default function WeatherForWeek(props){
 
 useEffect(()=>{
     setLoaded(false)
-}, [props.coord])
+}, [props.coord]);
+
  function showResponse (response){
     setLoaded(true);
  setForecast(response.data.daily);

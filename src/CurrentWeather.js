@@ -7,7 +7,6 @@ import Temperature from "./Temperature.js"
 
 
 export default function CurrentWeather(props){
-
     return(
         <div className="CurrentWeather">
             <div className="container">
@@ -51,6 +50,4 @@ export default function CurrentWeather(props){
            
         </div>
     );
-
-
 }
