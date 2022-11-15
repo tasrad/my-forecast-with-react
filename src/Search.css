@@ -25,6 +25,8 @@ form{
 }
 .btn-search:hover{
     cursor: pointer;
+    background-color: rgba(132, 132, 132, 0.673);
+    color:white;
 }
 .btn-current{
     background-color: wheat;

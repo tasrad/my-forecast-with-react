@@ -1,10 +1,10 @@
 
 .col{
-    border-left: 2px solid rgb(196, 195, 195);
     text-align: center;
+    border-radius: 4%;;
 }
 .col:hover{
-    background-color: rgba(196, 195, 195, 0.179);
+    background-color: rgba(196, 195, 195, 0.2);
 }
 .forecast-temp{
     font-size: 14px;
