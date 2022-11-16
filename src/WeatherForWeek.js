@@ -20,22 +20,23 @@ if (loaded){
     return(
         <div className="WeatherForWeek ">
                 <div className="row m-3">
-                    {forecast.map(function(dailyForecast, index) {
+                    {forecast.map(function (dailyWeather, index) {
                         if (index < 6){
                             return(
                                 <div className="col" key={index}>
-                                    <DailyForecast data={dailyForecast} />
+                                    <DailyForecast data={dailyWeather} />
                                  </div>
-                            )
-                        }
-                    })}
-                    
+                            );
+                        } else {
+                            return null;
+                          }
+                    })}                    
                 </div>
         </div>
     )} else {
         let lat = props.coord.lat;
         let lon = props.coord.lon;
-        let key = "1dbf926d3b4417bf379db7043bec1047";
+        let key = "5f472b7acba333cd8a035ea85a0d4d4c";
         let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
 
         axios.get(apiUrl).then(showResponse);
