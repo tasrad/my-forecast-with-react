@@ -35,8 +35,9 @@ if (loaded){
     )} else {
         let lat = props.coord.lat;
         let lon = props.coord.lon;
-        let key = "0ebc654fccbc00189d5408f3d6f15b08";
+        let key = "1dbf926d3b4417bf379db7043bec1047";
         let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+
         axios.get(apiUrl).then(showResponse);
 
         return null;
