@@ -20,7 +20,7 @@ if (loaded){
     return(
         <div className="WeatherForWeek ">
                 <div className="row m-3">
-                    {forecast.map( function(dailyForecast, index){
+                    {forecast.map(function(dailyForecast, index) {
                         if (index < 6){
                             return(
                                 <div className="col" key={index}>
