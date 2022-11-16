@@ -13,11 +13,18 @@ export default function CurrentWeather(props){
                 <div className="row p-4">
                     <div className="col-6 ps-1">
                        <span className="city-name text-capitalize"> ⌂ {props.data.name}</span>
-                       <DayAndTime date={props.data.date}/>
-                    </div>
-                    <div className="col-6 sky text-capitalize">
+                       <div className=" sky text-capitalize">
                         {props.data.description}
                     </div>
+                       
+                    </div>
+                    <div  className="col-6 date">
+                        Last update:
+                        <div>
+                        <DayAndTime date={props.data.date}/>
+                        </div>
+                    </div>
+                        
                 </div>
                 <div className="row">
                     <div className="col-6">

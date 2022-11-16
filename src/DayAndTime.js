@@ -21,8 +21,8 @@ export default function DayAndTime(props){
         minutes = `0${minutes}`
       };
     return(
-        <div className="DayAndTime">
+        <span className="DayAndTime">
         {day}  {hours}:{minutes}
-        </div>
+        </span>
     );
 }

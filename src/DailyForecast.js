@@ -21,7 +21,7 @@ export default function dailyForecast(props){
     return(
         <div className="dailyForecast">
         <div>{showDay()}</div>
-        <div>
+        <div className="pt-2">
         <WeatherIcon code={props.data.weather[0].icon} size={29}/>
         </div>
         <span className="forecast-temp">

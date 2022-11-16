@@ -10,7 +10,11 @@ div{
 }
 .sky{
     vertical-align: bottom;
-    font-size: x-large;
+    font-size: large;
+    padding: 0;
+}
+.date{
+    padding-top: 12px;
 }
 .main-img{
     display: block;
