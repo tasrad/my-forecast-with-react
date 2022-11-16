@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useState } from "react";
 import CurrentWeather from "./CurrentWeather.js";
 import WeatherForWeek from "./WeatherForWeek.js";
+import Footer from "./Footer.js"
 
 
 
@@ -53,10 +54,12 @@ if (weatherData.ready) {
         </form>
         <CurrentWeather data={weatherData}/>
         <WeatherForWeek data={weatherData} coord={weatherData.coord}/>
+        <Footer />
         </div>
     );
   } else {
     searchCity();
     return "Loading...";
   }
+ 
 }

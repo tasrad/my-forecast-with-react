@@ -1,9 +1,19 @@
+body{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid rgb(196, 195, 195);
+    border-radius: 1%;
+    padding: 1%;
+    max-width: 50%;
+    height: 480px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+ }
 form{
    margin: 10px auto;
    display: block;
 }
 .input-search{
-    width: 55%; 
+    width: 65%; 
     height: 35px;
     border-radius: 5px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;

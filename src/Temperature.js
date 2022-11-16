@@ -17,7 +17,7 @@ function fahrenheit(){
 if (unit === "celsius"){
     return(
         <div className="Temperature ">
-        <strong className="current-temp">{props.temp}{" "} </strong>
+        <strong className="current-temp">{props.temp} </strong>
         <a href="/" className="text-decoration-none" onClick={showCelsius}>℃</a> 
         <span className="line">| </span> 
         <a href="/" className="text-decoration-none" onClick={showRahrenheit}>°F</a>
